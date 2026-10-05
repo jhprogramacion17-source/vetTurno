@@ -9,5 +9,5 @@ import java.util.List;
 @Repository
 public interface CitaRepository extends JpaRepository<Cita, Long> {
     boolean existsByVeterinarioIdAndFechaHora(Long veterinarioId, LocalDateTime fechaHora);
-    List<Cita> findByVeterinarioId(Long veterinarioId);
+    List<Cita> findByVeterinarioIdOrderByFechaHoraAsc(Long veterinarioId);
 }
